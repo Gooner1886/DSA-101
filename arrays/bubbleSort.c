@@ -31,12 +31,8 @@ int main(int argc, char *argv[])
         }
     }
     end = omp_get_wtime();
-    for (i = 0; i < N; i++)
-    {
-        printf(" %d", A[i]);
-    }
-
-    printf("\n-------------------------\n Time Parallel= %f", (end - start));
+    
+    printf("\n-------------------------\n Time to sort in Parallel= %f", (end - start));
 
     start1 = omp_get_wtime();
     for (i = 0; i < N - 1; i++)
@@ -51,12 +47,9 @@ int main(int argc, char *argv[])
         }
     }
     end1 = omp_get_wtime();
-    for (i = 0; i < N; i++)
-    {
-        printf(" %d", A[i]);
-    }
 
-    printf("\n-------------------------\n Serial Parallel= %f", (end1 - start1));
+    printf("\n-------------------------\n Time to sort in Serial= %f", (end1 - start1));
+    printf("\n");
 }
 
 void swap(int *num1, int *num2)
