@@ -1,4 +1,4 @@
-// Remove duplicates from Sorted Array
+// Leetcode - 26 - Remove duplicates from Sorted Array
 
 int removeDuplicates(vector<int>& nums) {
         if(nums.size() == 0) return 0;
