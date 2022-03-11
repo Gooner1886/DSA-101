@@ -24,8 +24,8 @@ public:
             x = (p1 != NULL) ? p1->val : 0;
             y = (p2 != NULL) ? p2->val : 0;
             sum = x + y + carry;
-            carry = sum/10;
-            temp->next = new ListNode(sum % 10);
+            carry = sum/10; // carry stored
+            temp->next = new ListNode(sum % 10); // Single digit addition sum
             temp = temp->next;
             if(p1 != NULL) p1 = p1->next;
             if(p2 != NULL) p2 = p2->next;
