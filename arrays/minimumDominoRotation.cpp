@@ -1,4 +1,4 @@
-// Leetcode - Minimum Domino rotations for equal row
+// Leetcode - 1007 - Minimum Domino rotations for equal row
 
 int numSwaps(int target, vector<int> A, vector<int> B)
 {
