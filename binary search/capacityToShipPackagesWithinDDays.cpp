@@ -1,31 +1,31 @@
-// Leetcode - 410 - Split Array Largest Sum (Binary Search + Greedy)
-bool canBeDistributed(vector<int> &nums, int mid, int m)
+// Leetcode - 1011 - Capacity to ship packages within D Days (Binary search + Greedy)
+bool canBeDivided(vector<int> &nums, int mid, int days)
 {
+    int dayCount = 1;
     int sum = 0;
-    int saCount = 1;
     for (int i = 0; i < nums.size(); i++)
     {
         sum += nums[i];
 
         if (sum > mid)
         {
-            saCount++;
+            dayCount++;
             sum = nums[i];
         }
     }
-    return saCount <= m;
+    return dayCount <= days;
 }
 
-int splitArray(vector<int> &nums, int m)
+int shipWithinDays(vector<int> &weights, int days)
 {
     int sum = 0;
     int maxVal = 0;
-    for (int val : nums)
+    for (int val : weights)
     {
         sum += val;
-        maxVal = max(val, maxVal);
+        maxVal = max(maxVal, val);
     }
-    if (nums.size() == m)
+    if (weights.size() == days)
     {
         return maxVal;
     }
@@ -36,7 +36,7 @@ int splitArray(vector<int> &nums, int m)
     while (low <= high)
     {
         int mid = low + (high - low) / 2;
-        if (canBeDistributed(nums, mid, m) == true)
+        if (canBeDivided(weights, mid, days) == true)
         {
             ans = mid;
             high = mid - 1;
