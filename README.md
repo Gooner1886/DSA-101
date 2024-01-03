@@ -1,5 +1,5 @@
 # DSA-101
-250+ and counting Leetcode solutions filtered by question tags and the data structures/algorithm involved in the question
+300+ and counting Leetcode solutions filtered by question tags and the data structures/algorithm involved in the question
 
 My Leetcode profile - https://leetcode.com/siddharth_sarma/
 
